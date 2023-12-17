@@ -1,0 +1,89 @@
+1.
+marks=int(input('enter the marks: '))
+remarks='good' if marks>=70 else 'average'
+print(remarks)
+
+
+
+enter the marks: 77
+good
+
+
+
+2.
+import sys
+human_years=float(input('Enter the no of human years: '))
+
+if human_years<0:
+    print('Error: Please enter a non negative no of human years')
+    sys.exit(0)
+elif human_years<=2:
+    dog_years=human_years*10.5
+else:
+    dog_years=2*10.5+(human_years-2)*4
+
+print(human_years,'no of human years is equivalent to ',dog_years,'dog years')
+
+
+
+Enter the no of human years: 7
+7.0 no of human years is equivalent to  41.0 dog years
+
+
+
+3.
+month_name=input('Enter the month name:')
+
+if month_name=='January' or month_name=='March' or month_name=='May' or month_name=='July' or month_name=='August' \
+   or month_name=='October' or month_name=='December': 
+    days=31
+elif month_name=='February':
+    year=input('Enter the year (yyyy): ')
+    if(year%400==0) or (year%4==0 and year%100!=0):
+        days=29
+    else:
+        days=28
+if month_name=='April' or month_name=='June' or month_name=='September' or month_name=='November':
+    days=30
+
+if days is not None:
+    print(month_name,'has',days,'days')
+else:
+    print('Invalid month name')
+
+
+
+Enter the month name:August
+August has 31 days
+
+
+4.
+import random
+spin_result=random.randint(0,36)
+print('Spin Result =',spin_result)
+if spin_result==0:
+    print('Pay 0')
+elif spin_result==0:
+    print('Pay 00')
+else:
+    if spin_result in [1,3,4,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]:
+        print('Pay Red')
+    else:
+        print('Pay Black')
+
+if spin_result%2==0:
+    print('Pay Even')
+else:
+    print('Pay Odd')
+
+if 1<=spin_result<=18:
+    print('1 to 18')
+else:
+    print('19 to 36')
+
+
+
+Spin Result = 7
+Pay Red
+Pay Odd
+1 to 18

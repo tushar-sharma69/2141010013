@@ -1,0 +1,4 @@
+import importedModule
+print('hello')
+
+

@@ -1,0 +1,10 @@
+n=int(input('enter a four digit number: '))
+r1=n%10
+n=n//10
+r2=n%10
+n=n//10
+r3=n%10
+n=n//10
+r4=n%10
+sum=r1+r2+r3+r4
+print(r4,'+',r3,'+',r2,'+',r1,'=',sum)
